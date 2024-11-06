@@ -33,7 +33,7 @@ def broadcast(message, sender_conn):
     for client in clients:
         if client != sender_conn: 
             try: 
-                client.sendell(message.encode('utf-8'))
+                client.sendall(message.encode('utf-8'))
             except:
                 pass
 
